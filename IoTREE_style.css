@@ -1,0 +1,123 @@
+@font-face {
+	font-family: "monument";
+	src: url(MonumentExtended-Regular.otf);
+}
+
+html {
+	font-family: "monument";
+	--nav-unchecked-color: #7b7f84;
+	--nav-checked-color: #1fc368;
+	--nav-logo-color: #364e34;
+	--nav-bar-color: white;
+	background-color: green;
+}
+
+a {
+	text-align: center;
+}
+
+.index-bg {
+	z-index: -1;
+	height: auto;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: -8px;
+}
+
+.navigation-bar {
+	top: 0;
+	margin: -8px;
+	background-color: var(--nav-bar-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-height: 70px;
+	opacity: 80%;
+	text-align: center;
+	position: sticky;
+	align-items: center;
+}
+
+.cont1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.cont2 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.cont3 {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.cont4 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.cont5-login-icon {
+	display: flex;
+	padding-right: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--nav-logo-color);
+}
+
+.nav-cont {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-unchecked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont:hover {
+	color: var(--nav-checked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.nav-cont-h {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-checked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont-h:hover {
+	color: var(--nav-unchecked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.login-icon {
+	width: 55px;
+	height: 55px;
+	transition: transform 0.25s ease-out;
+}
+
+.login-icon:hover {
+	transform: scale(1.07) translateY(-1px);
+}
