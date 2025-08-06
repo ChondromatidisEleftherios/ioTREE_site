@@ -9,20 +9,12 @@ html {
 	--nav-checked-color: #1fc368;
 	--nav-logo-color: #364e34;
 	--nav-bar-color: white;
-	background-color: white;
+	background-color: #e0fff3;
+	--form-color: #f0f4f8;
 }
 
 a {
 	text-align: center;
-}
-
-.index-bg {
-	z-index: -1;
-	height: auto 100%;
-	width: 100%;
-	position: absolute;
-	margin-left: -8px;
-	margin-top: -8px;
 }
 
 .navigation-bar {
@@ -134,6 +126,93 @@ a {
 	transform: scale(1.07) translateY(-1px);
 }
 
+.main-form-cont {
+	/*border: 2px solid yellow;*/
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 20px;
+	min-height: 580px;
+	max-height: 645px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.form-cont2 {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	/*border: 2px solid red;*/
+	margin-left: 60px;
+	margin-right: 60px;
+	width: 100%;
+	border-radius: 35px;
+	background-color: var(--form-color);
+}
+
+.form-cont3 {
+	display: flex;
+	width: 37%;
+	min-height: 580px;
+	max-height: 645px;
+	/*border: 2px solid green;*/
+}
+
+.sign-up-img {
+	border-radius: 35px;
+	min-width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: flex;
+}
+
+.form-cont4 {
+	width: 50px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: 50px;
+}
+
+.form-cont5-line {
+	border-right: 4px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 260px;
+	max-height: 292px;
+	margin-top: 10px;
+}
+
+.form-cont6-line {
+	border-right: 4px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 260px;
+	max-height: 292px;
+	margin-bottom: 10px;
+}
+
+.google-logo {
+	height: 30px;
+	width: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.form-cont7-or {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.or {
+	rotate: 90deg;
+	color: var(--nav-unchecked-color);
+}
 @media (max-width: 500px) {
 	.navigation-bar {
 		background-color: red;
