@@ -228,5 +228,6 @@ a {
 @media (max-width: 1050px) {
 	.navigation-bar {
 		background-color: red;
+		opacity: 50%;
 	}
 }
