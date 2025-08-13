@@ -1,0 +1,366 @@
+@font-face {
+	font-family: "monument";
+	src: url(MonumentExtended-Regular.otf);
+}
+
+@font-face {
+	font-family: "akzidenz-bold";
+	src: url(akzidenz.ttf);
+}
+
+@font-face {
+	font-family: "akzidenz";
+	src: url(akzidenz-normal.ttf);
+}
+
+html {
+	font-family: "monument";
+	--nav-unchecked-color: #7b7f84;
+	--nav-checked-color: #1fc368;
+	--nav-logo-color: #364e34;
+	--nav-bar-color: white;
+	background-color: #e0fff3;
+	--form-color: #f0f4f7;
+	--invalid-creds-color: #ea542b;
+	--form-header-col: #00da87;
+}
+
+a {
+	text-align: center;
+}
+
+.navigation-bar {
+	top: 0;
+	margin: -8px;
+	background-color: var(--nav-bar-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-height: 70px;
+	opacity: 80%;
+	text-align: center;
+	position: sticky;
+	align-items: center;
+}
+
+.cont1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.cont2 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.cont2-logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 75px;
+	min-height: 45px;
+}
+.iotree-logo {
+	width: 75px;
+	height: 45px;
+}
+
+.cont3 {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.cont4 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.cont5-login-icon {
+	display: flex;
+	padding-right: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--nav-logo-color);
+}
+
+.nav-cont,
+.nav-cont-h {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-unchecked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont:hover,
+.nav-cont-h:hover {
+	color: var(--nav-checked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.login-icon {
+	width: 55px;
+	height: 55px;
+	transition: transform 0.25s ease-out;
+}
+
+.login-icon:hover {
+	transform: scale(1.07) translateY(-1px);
+}
+
+.main-form-cont {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	margin: 20px;
+	min-height: 550px;
+	max-height: 645px;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.form-cont2 {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	margin-left: 60px;
+	margin-right: 60px;
+	width: 100%;
+	min-width: 780px;
+	max-width: 2250px;
+	border-radius: 35px;
+	background-color: var(--form-color);
+}
+
+.form-cont3 {
+	display: flex;
+	width: 43%;
+	min-height: 580px;
+	max-height: 645px;
+	padding: 5px;
+}
+
+.sign-up-img {
+	border-radius: 35px;
+	min-width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: flex;
+}
+
+.form-cont4 {
+	max-width: 70px;
+	min-width: 30px;
+	width: 50px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: clamp(10px, 1.7vw, 32px);
+}
+
+.form-cont5-line {
+	border-right: 3px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 260px;
+	max-height: 292px;
+	margin-top: 10px;
+	border-radius: 15px;
+}
+
+.form-cont6-line {
+	border-right: 3px solid black;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	min-height: 260px;
+	max-height: 292px;
+	margin-bottom: 10px;
+	border-radius: 15px;
+}
+
+.google-logo {
+	height: 30px;
+	width: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.form-cont7-or {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.or {
+	rotate: 90deg;
+	color: var(--nav-unchecked-color);
+}
+
+.form-cont8 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	margin-left: clamp(10px, 2.3vw, 400px);
+	width: 40%;
+	min-width: 200px;
+	max-width: 1100px;
+}
+
+.form-cont9-text {
+	display: flex;
+	flex-direction: column;
+	margin-top: 60px;
+	align-items: center;
+}
+
+.above-form-header {
+	font-family: "akzidenz-bold";
+	letter-spacing: 2px;
+	color: var(--form-header-col);
+	font-size: clamp(22px, 2.6vw, 32px);
+}
+
+.above-form-text {
+	font-family: "akzidenz";
+	letter-spacing: 2px;
+	color: #aaaaaa;
+	font-size: clamp(12px, 1.25vw, 16px);
+}
+
+.form-cont10-creds {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	height: 35%;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.username,
+.email-address,
+.password {
+	outline: none;
+	border-radius: 25px;
+	width: clamp(120px, 22vw, 410px);
+	height: 35px;
+	border: none;
+	border-bottom: 3px solid var(--nav-unchecked-color);
+	font-size: clamp(10px, 1.1vw, 16px);
+	padding-left: 25px;
+	padding-top: 5px;
+	letter-spacing: 1px;
+	overflow: visible;
+	transition:
+		transform 0.28s ease-out,
+		border-bottom 0.28s ease-out;
+}
+
+.username::placeholder,
+.email-address::placeholder,
+.password::placeholder {
+	color: black;
+	opacity: 30%;
+	font-size: clamp(10px, 1.1vw, 16px);
+	font-family: "akzidenz";
+	letter-spacing: 1px;
+	overflow: visible;
+}
+
+.username:hover,
+.email-address:hover,
+.password:hover {
+	transform: translateY(-3px);
+	border-bottom: 3px solid var(--nav-checked-color);
+}
+
+.username:focus,
+.email-address:focus,
+.password:focus {
+	transform: scale(1.03) translateY(-3px);
+	border-bottom: 5px solid var(--nav-checked-color);
+}
+
+.username:invalid,
+.email-address:invalid,
+.password:invalid {
+	border-bottom: 5px solid var(--invalid-creds-color);
+}
+
+.form-cont11-rememberme {
+	display: flex;
+	flex-direction: row;
+	min-height: 50px;
+	width: clamp(10px, 10.5vw, 200px);
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.remember-me {
+	cursor: pointer;
+}
+
+.remember-me-text {
+	font-family: "akzidenz";
+	color: #7b7f84;
+	font-size: clamp(8px, 1.2vw, 16px);
+}
+
+.form-cont12-signup {
+	width: 75%;
+	height: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.sign-up-btn {
+	height: 45px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 7px 7px 7px #6c6e6f;
+	background-color: var(--nav-checked-color);
+	color: var(--form-color);
+	font-family: "akzidenz-bold";
+	font-size: 1.1rem;
+	cursor: pointer;
+	width: 120px;
+	transition:
+		transform 0.28s ease-out,
+		background-color 0.28s ease-out;
+}
+
+.sign-up-btn:hover {
+	transform: translateY(-4px) scale(1.03) translateX(-2px);
+	background-color: #148c44;
+}
+
+@media (max-width: 1050px) {
+	.navigation-bar {
+		background-color: red;
+	}
+}

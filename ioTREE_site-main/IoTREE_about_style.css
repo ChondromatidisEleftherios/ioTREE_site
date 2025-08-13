@@ -1,0 +1,233 @@
+@font-face {
+	font-family: "monument";
+	src: url(MonumentExtended-Regular.otf);
+}
+
+@font-face {
+	font-family: "akzidenz-bold";
+	src: url(akzidenz.ttf);
+}
+
+@font-face {
+	font-family: "akzidenz";
+	src: url(akzidenz-normal.ttf);
+}
+
+html {
+	font-family: "monument";
+	--nav-unchecked-color: #7b7f84;
+	--nav-checked-color: #1fc368;
+	--nav-logo-color: #364e34;
+	--nav-bar-color: white;
+	background-color: #e0fff3;
+	--form-color: #f0f4f7;
+	--invalid-creds-color: #ea542b;
+	--form-header-col: #00da87;
+}
+
+a {
+	text-align: center;
+}
+
+.IoTREE-about-bg {
+	z-index: -1;
+	width: 100%;
+	position: absolute;
+	object-fit: cover;
+	margin: -8px;
+	height: clamp(250px, 60vw, 1500px);
+}
+
+.navigation-bar {
+	top: 0;
+	margin: -8px;
+	background-color: var(--nav-bar-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-height: 70px;
+	opacity: 80%;
+	text-align: center;
+	position: sticky;
+	align-items: center;
+}
+
+.cont1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.cont2 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.cont2-logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 75px;
+	min-height: 45px;
+}
+.iotree-logo {
+	width: 75px;
+	height: 45px;
+}
+
+.cont3 {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.cont4 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.cont5-login-icon {
+	display: flex;
+	padding-right: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--nav-logo-color);
+}
+
+.nav-cont {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-unchecked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont-h {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-checked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont:hover {
+	color: var(--nav-checked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.nav-cont-h:hover {
+	color: var(--nav-unchecked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.login-icon {
+	width: 55px;
+	height: 55px;
+	transition: transform 0.25s ease-out;
+}
+
+.login-icon:hover {
+	transform: scale(1.07) translateY(-1px);
+}
+
+.about-main-cont {
+	margin: 8px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	height: clamp(180px, 50vw, 1300px);
+	margin-top: 20px;
+}
+
+.about-cont2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 22%;
+	width: 100%;
+}
+
+.about-cont3-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about-cont4-cards {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-around;
+	gap: clamp(5px, 5vw, 30px);
+	width: 90%;
+	height: 68%;
+	margin-top: clamp(10px, 5vw, 35px);
+}
+
+.IoTREE-header {
+	font-size: clamp(12px, 2.8vw, 42px);
+	color: var(--form-color);
+	letter-spacing: 3px;
+	font-family: "monument";
+}
+
+.card {
+	height: 95%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: white;
+	opacity: 75%;
+	width: 24%;
+	border-radius: 75px;
+	z-index: 0;
+}
+
+.card-image-cont {
+	opacity: 100%;
+	width: 130%;
+}
+
+.About-Icon {
+	width: 100%;
+	display: flex;
+}
+
+.text-content {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+}
+
+.about-us-text {
+	font-size: clamp(10px, 0.8vw, 18px);
+	width: 100%;
+	display: flex;
+	overflow: hidden;
+}
+
+@media (max-width: 1050px) {
+	.navigation-bar {
+		background-color: red;
+		opacity: 50%;
+	}
+}

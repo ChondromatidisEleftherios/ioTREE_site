@@ -1,0 +1,240 @@
+@font-face {
+	font-family: "monument";
+	src: url(MonumentExtended-Regular.otf);
+}
+
+html {
+	font-family: "monument";
+	--nav-unchecked-color: #7b7f84;
+	--nav-checked-color: #1fc368;
+	--nav-logo-color: #364e34;
+	--nav-bar-color: white;
+	background-color: white;
+}
+
+a {
+	text-align: center;
+}
+
+.index-bg {
+	z-index: -1;
+	height: auto 100%;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: -8px;
+}
+
+.navigation-bar {
+	top: 0;
+	margin: -8px;
+	background-color: var(--nav-bar-color);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	min-height: 70px;
+	opacity: 80%;
+	text-align: center;
+	position: sticky;
+	align-items: center;
+}
+
+.cont1 {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 50px;
+	width: 100%;
+	align-items: center;
+}
+
+.cont2 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-start;
+	height: 100%;
+}
+
+.cont2-logo {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	min-width: 75px;
+	min-height: 45px;
+}
+.iotree-logo {
+	width: 75px;
+	height: 45px;
+}
+
+.cont3 {
+	display: flex;
+	justify-content: space-around;
+	padding-left: 50px;
+	width: 100%;
+}
+
+.cont4 {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	gap: 40px;
+	overflow: hidden;
+	align-items: center;
+}
+
+.cont5-login-icon {
+	display: flex;
+	padding-right: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	font-size: 18px;
+	text-decoration: none;
+	color: var(--nav-logo-color);
+}
+
+.nav-cont {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-unchecked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont:hover {
+	color: var(--nav-checked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.nav-cont-h {
+	font-size: 16px;
+	text-decoration: none;
+	color: var(--nav-checked-color);
+	transition:
+		color 0.25s ease-out,
+		transform 0.25s ease-out;
+}
+
+.nav-cont-h:hover {
+	color: var(--nav-unchecked-color);
+	transform: scale(1.05) translateY(-0.5px);
+}
+
+.login-icon {
+	width: 55px;
+	height: 55px;
+	transition: transform 0.25s ease-out;
+}
+
+.login-icon:hover {
+	transform: scale(1.07) translateY(-1px);
+}
+
+@media (max-width: 500px) {
+	.navigation-bar {
+		background-color: red;
+	}
+}
+/* Helios Chatbot Pill (addition)*/
+/* Helios Chatbot Pill */
+.chatbot-pill {
+	position: absolute;
+	top: 120px;  /* adjust for perfect Canva position */
+	left: 40px;  /* adjust horizontal placement */
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 14px;
+	border-radius: 999px;
+	background: white;
+	box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+	text-decoration: none;
+	color: #1a1a1a;
+	font-weight: 600;
+	z-index: 10;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  
+  .chatbot-pill img {
+	width: 36px;  /* match Canva size */
+	height: 36px;
+	display: block;
+	transition: transform 0.25s ease;
+  }
+  
+  /* Hover effect */
+  .chatbot-pill:hover {
+	transform: translateY(-2px) scale(1.05);
+	box-shadow: 0 12px 40px rgba(0, 255, 128, 0.25); /* subtle green glow */
+  }
+  
+  .chatbot-pill:hover img {
+	transform: rotate(8deg); /* playful tilt on hover */
+  }
+  /* Helios Chatbot Pill (addition)*/
+  /* Social Media Vertical Bar */
+/* Social Media Vertical Bar */
+.social-rail {
+	position: fixed;            /* stays pinned to viewport */
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: grid;
+	grid-auto-rows: min-content;
+	gap: 14px;
+	align-items: center;
+	justify-items: center;
+	padding: 14px 10px;
+	width: 56px;
+	border-radius: 28px;
+	background: rgba(255, 255, 255, 0.72);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.14);
+	z-index: 1000;              /* above background + content */
+  }
+  
+  .social-rail .label {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	color: #6b7280;
+	user-select: none;
+  }
+  
+  .social-rail .rail-btn {
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+	background: rgba(255,255,255,0.85);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+	transition: transform .2s ease, box-shadow .2s ease;
+  }
+  
+  .social-rail .rail-btn:hover {
+	transform: translateY(-1px);
+	box-shadow: inset 0 0 0 1px rgba(31,195,104,0.5), 0 6px 18px rgba(0,0,0,0.15);
+  }
+  
+  .social-rail svg {
+	width: 18px;
+	height: 18px;
+	fill: #8a93a0;              /* neutral icon */
+  }
+  
+  .social-rail .rail-btn:hover svg {
+	fill: #1fc368;              /* IoTREE green on hover */
+  }
+  
+  /* Optional: hide on very small screens */
+  @media (max-width: 520px) {
+	.social-rail { display: none; }
+  }
+/* social media icons bar(addition)*/
