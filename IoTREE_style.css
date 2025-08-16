@@ -3,12 +3,18 @@
 	src: url(MonumentExtended-Regular.otf);
 }
 
+@font-face {
+	font-family: "poppins";
+	src: url("Poppins-Regular.ttf");
+}
+
 html {
 	font-family: "monument";
 	--nav-unchecked-color: #7b7f84;
 	--nav-checked-color: #1fc368;
 	--nav-logo-color: #364e34;
 	--nav-bar-color: white;
+	--helios-text-color: #f0f4f7;
 	background-color: white;
 }
 
@@ -18,11 +24,11 @@ a {
 
 .index-bg {
 	z-index: -1;
-	height: auto 100%;
+	height: clamp(250px, 60vw, 1500px);
 	width: 100%;
 	position: absolute;
-	margin-left: -8px;
-	margin-top: -8px;
+	margin: -8px;
+	object-fit: cover;
 }
 
 .navigation-bar {
@@ -37,6 +43,7 @@ a {
 	text-align: center;
 	position: sticky;
 	align-items: center;
+	z-index: 1;
 }
 
 .cont1 {
@@ -134,8 +141,189 @@ a {
 	transform: scale(1.07) translateY(-1px);
 }
 
-@media (max-width: 500px) {
+.main-cont {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: row;
+	height: clamp(180px, 52vw, 1300px);
+	margin-top: 20px;
+	margin-left: -8px;
+	margin-right: -8px;
+	flex-wrap: wrap;
+}
+
+.helios-chatbot-pill {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	opacity: 90%;
+	position: sticky;
+	z-index: 0;
+	top: 75px;
+}
+
+.helios {
+	width: clamp(38px, 4.5vw, 65px);
+	height: clamp(38px, 4.5vw, 65px);
+}
+
+.helios-text {
+	font-family: "poppins";
+	color: var(--helios-text-color);
+	letter-spacing: 1px;
+	font-size: clamp(12px, 1.25vw, 15px);
+}
+
+.mid-area-cont {
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	position: relative;
+	left: 0;
+}
+
+.socials-pill {
+	font-family: "poppins";
+	height: 45px;
+	rotate: 270deg;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	border-radius: 25px;
+	background-color: var(--helios-text-color);
+	opacity: 75%;
+	overflow: hidden;
+	margin-left: -85px;
+}
+
+.social-text {
+	color: var(--nav-unchecked-color);
+	margin-left: 20px;
+	font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.social-media-icons {
+	display: flex;
+	width: 50%;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sm-pill {
+	width: clamp(58px, 5.8vw, 68px);
+	height: clamp(58px, 5.8vw, 68px);
+}
+
+/* Helios Chatbot Pill (addition)*/
+/* Helios Chatbot Pill 
+.chatbot-pill {
+	position: absolute;
+	top: 120px; /* adjust for perfect Canva position 
+	left: 40px; /* adjust horizontal placement 
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 14px;
+	border-radius: 999px;
+	background: white;
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+	text-decoration: none;
+	color: #1a1a1a;
+	font-weight: 600;
+	z-index: 10;
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.chatbot-pill img {
+	width: 36px; /* match Canva size 
+	height: 36px;
+	display: block;
+	transition: transform 0.25s ease;
+}
+
+.chatbot-pill:hover {
+	transform: translateY(-2px) scale(1.05);
+	box-shadow: 0 12px 40px rgba(0, 255, 128, 0.25); /* subtle green glow 
+}
+
+.chatbot-pill:hover img {
+	transform: rotate(8deg); /* playful tilt on hover 
+}
+/* Helios Chatbot Pill (addition)*/
+/* Social Media Vertical Bar */
+/* Social Media Vertical Bar 
+.social-rail {
+	position: fixed; /* stays pinned to viewport
+	left: 12px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: grid;
+	grid-auto-rows: min-content;
+	gap: 14px;
+	align-items: center;
+	justify-items: center;
+	padding: 14px 10px;
+	width: 56px;
+	border-radius: 28px;
+	background: rgba(255, 255, 255, 0.72);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+	z-index: 1000; /* above background + content 
+}
+
+.social-rail .label {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
+	font-size: 12px;
+	letter-spacing: 0.5px;
+	color: #6b7280;
+	user-select: none;
+}
+
+.social-rail .rail-btn {
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	display: grid;
+	place-items: center;
+	background: rgba(255, 255, 255, 0.85);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.social-rail .rail-btn:hover {
+	transform: translateY(-1px);
+	box-shadow:
+		inset 0 0 0 1px rgba(31, 195, 104, 0.5),
+		0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.social-rail svg {
+	width: 18px;
+	height: 18px;
+	fill: #8a93a0; /* neutral icon 
+}
+
+.social-rail .rail-btn:hover svg {
+	fill: #1fc368; /* IoTREE green on hover 
+}
+*/
+
+@media (max-width: 1050px) {
 	.navigation-bar {
 		background-color: red;
+		opacity: 50%;
 	}
 }
