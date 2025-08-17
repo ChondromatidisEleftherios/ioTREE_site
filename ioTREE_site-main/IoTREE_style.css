@@ -3,12 +3,23 @@
 	src: url(MonumentExtended-Regular.otf);
 }
 
+@font-face {
+	font-family: "poppins";
+	src: url("Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: "rubik-mono";
+	src: url("RubikMono-Regular.ttf");
+}
+
 html {
 	font-family: "monument";
 	--nav-unchecked-color: #7b7f84;
 	--nav-checked-color: #1fc368;
 	--nav-logo-color: #364e34;
 	--nav-bar-color: white;
+	--helios-text-color: #f0f4f7;
 	background-color: white;
 }
 
@@ -18,11 +29,11 @@ a {
 
 .index-bg {
 	z-index: -1;
-	height: auto 100%;
+	height: clamp(250px, 60vw, 1500px);
 	width: 100%;
 	position: absolute;
-	margin-left: -8px;
-	margin-top: -8px;
+	margin: -8px;
+	object-fit: cover;
 }
 
 .navigation-bar {
@@ -37,6 +48,7 @@ a {
 	text-align: center;
 	position: sticky;
 	align-items: center;
+	z-index: 1;
 }
 
 .cont1 {
@@ -134,52 +146,181 @@ a {
 	transform: scale(1.07) translateY(-1px);
 }
 
-@media (max-width: 500px) {
-	.navigation-bar {
-		background-color: red;
-	}
+.main-cont {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: row;
+	height: clamp(180px, 54.2vw, 1450px);
+	margin-top: 20px;
+	margin-left: -8px;
+	margin-right: -8px;
+	flex-wrap: wrap;
 }
+
+.helios-chatbot-pill {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	opacity: 90%;
+	position: sticky;
+	z-index: 0;
+	top: 75px;
+}
+
+.helios {
+	width: clamp(38px, 4.5vw, 65px);
+	height: clamp(38px, 4.5vw, 65px);
+}
+
+.helios-text {
+	font-family: "poppins";
+	color: var(--helios-text-color);
+	letter-spacing: 1px;
+	font-size: clamp(12px, 1.25vw, 15px);
+}
+
+.mid-area-cont {
+	height: 43%;
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	position: relative;
+	left: 0;
+}
+
+.socials-pill {
+	margin-top: 80px;
+	height: 45px;
+	rotate: 270deg;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: space-around;
+	border-radius: 25px;
+	background-color: var(--helios-text-color);
+	opacity: 75%;
+	overflow: hidden;
+	margin-left: -85px;
+}
+
+.social-text {
+	font-family: "poppins";
+	color: var(--nav-unchecked-color);
+	margin-left: 20px;
+	font-size: clamp(12px, 1.2vw, 16px);
+}
+
+.social-media-icons {
+	display: flex;
+	width: 50%;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.sm-pill {
+	width: clamp(58px, 5.8vw, 68px);
+	height: clamp(58px, 5.8vw, 68px);
+	transition:
+		filter 0.17s linear,
+		transform 0.27s ease-out;
+}
+
+.sm-pill:hover {
+	cursor: pointer;
+	filter: brightness(0%) saturate(100%) invert(45%) sepia(65%) saturate(400%)
+		hue-rotate(90deg) brightness(100%) contrast(95%);
+	transform: scale(1.05);
+}
+
+.bottom-cont {
+	overflow: hidden;
+	width: 100%;
+	height: 48%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.bottom-cont2-contents {
+	width: 70%;
+	height: 100%;
+	background: rgba(255, 255, 255, 40%);
+	border-radius: 40px;
+	display: flex;
+	flex-direction: row;
+	backdrop-filter: blur(8px);
+	flex-wrap: wrap;
+}
+
+.bottom-cont3-header {
+	width: 42%;
+	height: 40%;
+	margin-left: 40px;
+	font-size: 24px;
+}
+
+.bottom-header {
+	font-family: "monument";
+	letter-spacing: 4px;
+	color: white;
+}
+
+.bottom-cont4-mid-section {
+	width: 100%;
+	margin-left: 120px;
+	height: 50%;
+	font-family: "rubik-mono";
+}
+
 /* Helios Chatbot Pill (addition)*/
-/* Helios Chatbot Pill */
+/* Helios Chatbot Pill 
 .chatbot-pill {
 	position: absolute;
-	top: 120px;  /* adjust for perfect Canva position */
-	left: 40px;  /* adjust horizontal placement */
+	top: 120px; /* adjust for perfect Canva position 
+	left: 40px; /* adjust horizontal placement 
 	display: flex;
 	align-items: center;
 	gap: 10px;
 	padding: 10px 14px;
 	border-radius: 999px;
 	background: white;
-	box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+	box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 	text-decoration: none;
 	color: #1a1a1a;
 	font-weight: 600;
 	z-index: 10;
-	transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  
-  .chatbot-pill img {
-	width: 36px;  /* match Canva size */
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.chatbot-pill img {
+	width: 36px; /* match Canva size 
 	height: 36px;
 	display: block;
 	transition: transform 0.25s ease;
-  }
-  
-  /* Hover effect */
-  .chatbot-pill:hover {
+}
+
+.chatbot-pill:hover {
 	transform: translateY(-2px) scale(1.05);
-	box-shadow: 0 12px 40px rgba(0, 255, 128, 0.25); /* subtle green glow */
-  }
-  
-  .chatbot-pill:hover img {
-	transform: rotate(8deg); /* playful tilt on hover */
-  }
-  /* Helios Chatbot Pill (addition)*/
-  /* Social Media Vertical Bar */
+	box-shadow: 0 12px 40px rgba(0, 255, 128, 0.25); /* subtle green glow 
+}
+
+.chatbot-pill:hover img {
+	transform: rotate(8deg); /* playful tilt on hover 
+}
+/* Helios Chatbot Pill (addition)*/
 /* Social Media Vertical Bar */
+/* Social Media Vertical Bar 
 .social-rail {
-	position: fixed;            /* stays pinned to viewport */
+	position: fixed; /* stays pinned to viewport
 	left: 12px;
 	top: 50%;
 	transform: translateY(-50%);
@@ -194,47 +335,53 @@ a {
 	background: rgba(255, 255, 255, 0.72);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	box-shadow: 0 10px 30px rgba(0,0,0,0.14);
-	z-index: 1000;              /* above background + content */
-  }
-  
-  .social-rail .label {
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+	z-index: 1000; /* above background + content 
+}
+
+.social-rail .label {
 	writing-mode: vertical-rl;
 	transform: rotate(180deg);
 	font-size: 12px;
 	letter-spacing: 0.5px;
 	color: #6b7280;
 	user-select: none;
-  }
-  
-  .social-rail .rail-btn {
+}
+
+.social-rail .rail-btn {
 	width: 36px;
 	height: 36px;
 	border-radius: 10px;
 	display: grid;
 	place-items: center;
-	background: rgba(255,255,255,0.85);
-	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
-	transition: transform .2s ease, box-shadow .2s ease;
-  }
-  
-  .social-rail .rail-btn:hover {
+	background: rgba(255, 255, 255, 0.85);
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+	transition:
+		transform 0.2s ease,
+		box-shadow 0.2s ease;
+}
+
+.social-rail .rail-btn:hover {
 	transform: translateY(-1px);
-	box-shadow: inset 0 0 0 1px rgba(31,195,104,0.5), 0 6px 18px rgba(0,0,0,0.15);
-  }
-  
-  .social-rail svg {
+	box-shadow:
+		inset 0 0 0 1px rgba(31, 195, 104, 0.5),
+		0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.social-rail svg {
 	width: 18px;
 	height: 18px;
-	fill: #8a93a0;              /* neutral icon */
-  }
-  
-  .social-rail .rail-btn:hover svg {
-	fill: #1fc368;              /* IoTREE green on hover */
-  }
-  
-  /* Optional: hide on very small screens */
-  @media (max-width: 520px) {
-	.social-rail { display: none; }
-  }
-/* social media icons bar(addition)*/
+	fill: #8a93a0; /* neutral icon 
+}
+
+.social-rail .rail-btn:hover svg {
+	fill: #1fc368; /* IoTREE green on hover 
+}
+*/
+
+@media (max-width: 1050px) {
+	.navigation-bar {
+		background-color: red;
+		opacity: 50%;
+	}
+}
