@@ -4,9 +4,11 @@ class AccountsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'accounts'
 
-    def ready(self):
-        # This will run when the app is loaded
-        try:
-            import accounts.signals
-        except ImportError:
-            pass  # Prevent Pylance error in dev if signals not created yet
+def ready(self):
+    print("🔁 AppConfig ready() executing...")
+
+    try:
+        import accounts.signals
+        print("✅ accounts.signals loaded")
+    except Exception as e:
+        print(f"❌ Failed to import accounts.signals: {e}")
