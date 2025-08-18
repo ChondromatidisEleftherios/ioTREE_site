@@ -1,0 +1,2 @@
+python-decouple
+pip freeze > requirements.txt
