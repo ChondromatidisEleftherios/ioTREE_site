@@ -8,6 +8,11 @@
 	src: url("Poppins-Regular.ttf");
 }
 
+@font-face {
+	font-family: "rubik-mono";
+	src: url("RubikMono-Regular.ttf");
+}
+
 html {
 	font-family: "monument";
 	--nav-unchecked-color: #7b7f84;
@@ -24,11 +29,12 @@ a {
 
 .index-bg {
 	z-index: -1;
-	height: clamp(250px, 60vw, 1500px);
+	height: clamp(250px, 64.5vw, 1200px);
 	width: 100%;
 	position: absolute;
 	margin: -8px;
 	object-fit: cover;
+	overflow: hidden;
 }
 
 .navigation-bar {
@@ -146,7 +152,7 @@ a {
 	justify-content: flex-start;
 	align-items: flex-start;
 	flex-direction: row;
-	height: clamp(180px, 52vw, 1300px);
+	height: clamp(250px, 58vw, 1200px);
 	margin-top: 20px;
 	margin-left: -8px;
 	margin-right: -8px;
@@ -157,7 +163,8 @@ a {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-start;
+	justify-content: flex-end;
+	margin-right: 20px;
 	align-items: center;
 	opacity: 90%;
 	position: sticky;
@@ -178,17 +185,18 @@ a {
 }
 
 .mid-area-cont {
-	height: 50%;
+	height: 43%;
+	width: 30%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: flex-start;
 	position: relative;
 	left: 0;
 }
 
 .socials-pill {
-	font-family: "poppins";
+	margin-top: 80px;
 	height: 45px;
 	rotate: 270deg;
 	display: flex;
@@ -203,6 +211,7 @@ a {
 }
 
 .social-text {
+	font-family: "poppins";
 	color: var(--nav-unchecked-color);
 	margin-left: 20px;
 	font-size: clamp(12px, 1.2vw, 16px);
@@ -219,6 +228,72 @@ a {
 .sm-pill {
 	width: clamp(58px, 5.8vw, 68px);
 	height: clamp(58px, 5.8vw, 68px);
+	transition:
+		filter 0.17s linear,
+		transform 0.27s ease-out;
+}
+
+.sm-pill:hover {
+	cursor: pointer;
+	filter: brightness(0%) saturate(100%) invert(45%) sepia(65%) saturate(400%)
+		hue-rotate(90deg) brightness(100%) contrast(95%);
+	transform: scale(1.05);
+}
+
+.bottom-cont {
+	overflow: hidden;
+	width: 100%;
+	height: 38%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.bottom-cont2-contents {
+	width: 72%;
+	height: 100%;
+	background: rgba(255, 255, 255, 40%);
+	border-radius: 40px;
+	display: flex;
+	flex-direction: row;
+	backdrop-filter: blur(8px);
+	flex-wrap: wrap;
+}
+
+.bottom-cont3-header {
+	width: 42%;
+	height: 35%;
+	margin-left: 35px;
+}
+
+.bottom-header {
+	font-family: "monument";
+	letter-spacing: 4px;
+	color: white;
+	font-size: clamp(28px, 3.3vw, 52px);
+}
+
+.bottom-cont4-mid-text {
+	width: 100%;
+	height: 55%;
+	display: flex;
+	flex-directiction: column;
+	flex-wrap: wrap;
+}
+
+.bottom-mid-text {
+	font-family: "rubik-mono";
+	margin-left: clamp(40px, 6.5vw, 110px);
+	font-size: clamp(24px, 2.4vw, 34px);
+}
+
+.bottom-low-text {
+	font-family: "poppins";
+	margin-left: 35px;
+	letter-spacing: 2px;
+	font-size: clamp(16px, 1.8vw, 28px);
+	color: var(--nav-logo-color);
 }
 
 /* Helios Chatbot Pill (addition)*/
@@ -321,7 +396,7 @@ a {
 }
 */
 
-@media (max-width: 1050px) {
+@media (max-width: 1020px) {
 	.navigation-bar {
 		background-color: red;
 		opacity: 50%;
