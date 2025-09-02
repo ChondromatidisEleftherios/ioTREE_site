@@ -197,6 +197,30 @@ nav a.active {
 	background: transparent;
 }
 
+.lets-together-cont:hover {
+	animation: bubbly 1.5s linear infinite;
+}
+
+@keyframes bubbly {
+	25% {
+		rotate: 3deg;
+	}
+	50% {
+		rotate: -3deg;
+		color: var(--nav-checked-color);
+	}
+
+	75% {
+		rotate: 3deg;
+		color: var(--nav-checked-color);
+	}
+
+	90% {
+		rotate: -3deg;
+		transform: scale(1.04);
+	}
+}
+
 .lets-together-cont:before {
 	content: "";
 	position: absolute;
@@ -213,7 +237,7 @@ nav a.active {
 	position: absolute;
 	left: 20px;
 	right: 20px;
-	top: 190px;
+	top: calc(100% - 36px);
 	rotate: 180deg;
 	height: 30px;
 	border-radius: 35px;
@@ -284,7 +308,7 @@ nav a.active {
 
 @keyframes bounce {
 	70% {
-		margin-left: clamp(16px, 1.4vw, 48px);
+		margin-left: clamp(16px, 1.2vw, 48px);
 	}
 }
 
@@ -344,7 +368,7 @@ nav a.active {
 	position: absolute;
 	left: 20px;
 	right: 20px;
-	top: 260px;
+	top: calc(100% - 36px);
 	rotate: 180deg;
 	height: 30px;
 	border-radius: 35px;
@@ -379,7 +403,7 @@ nav a.active {
 }
 
 .footer-text {
-	font-size: clamp(7px, 0.65vw, 10px);
+	font-size: clamp(7px, 0.7vw, 10px);
 	letter-spacing: 2px;
 	margin-left: 30px;
 }
