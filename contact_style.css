@@ -151,7 +151,6 @@ nav a.active {
 
 	.contact-top-section {
 		height: clamp(241px, 14vw, 400px) !important;
-		border: 2px solid green;
 	}
 
 	.lets-together-cont {
