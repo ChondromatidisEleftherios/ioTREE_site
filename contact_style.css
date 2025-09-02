@@ -34,6 +34,7 @@ html {
 	--form-color: #f0f4f7;
 	--invalid-creds-color: #ea542b;
 	--form-header-col: #00da87;
+	height: 100%;
 }
 
 a {
@@ -161,58 +162,90 @@ nav a.active {
 }
 
 #contact-main-cont {
-	height: clamp(250px, 56vw, 800px);
+	height: clamp(250px, 55vw, 680px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	flex-wrap: wrap;
-	gap: 50px;
+	gap: 40px;
+	flex: 1;
 }
 
 .contact-top-section {
 	width: 100%;
-	height: 230px;
+	height: clamp(170px, 15vw, 240px);
 	display: flex;
 	justify-content: flex-start;
+	gap: clamp(30px, 3.5vw, 900px);
 	overflow: hidden;
+	align-items: center;
 }
 
 .lets-together-cont {
-	width: 400px;
-	height: 99%;
+	width: clamp(275px, 44vw, 420px);
+	height: 95%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
-	margin-left: 40px;
+	margin-left: 100px;
 	border-radius: 25px;
-	border: 2px solid cyan;
+	border: 1px solid transparent;
+	backdrop-filter: blur(8px);
+	box-shadow:
+		inset 0 -5px 20px hsla(0, 0%, 0%, 0.4),
+		inset 0 5px 20px hsla(0, 0%, 100%, 0.4);
+	background: transparent;
+}
+
+.lets-together-cont:before {
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 5px;
+	height: 30px;
+	border-radius: 35px;
+	background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0));
+}
+
+.lets-together-cont:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 190px;
+	rotate: 180deg;
+	height: 30px;
+	border-radius: 35px;
+	background: linear-gradient(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0));
 }
 
 .lets-together-text {
-	font-size: 48px;
+	font-size: clamp(36px, 2.9vw, 48px);
 	text-align: center;
 }
 
 .grow-section {
-	width: 50%;
-	margin-left: 50px;
+	width: clamp(400px, 77vw, 750px);
+	margin-left: clamp(28px, 2.8vw, 300px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	overflow: hidden;
+	position: relative;
+	margin-top: -40px;
 }
 
 .pot-video {
 	object-fit: cover;
-	width: 100%;
+	width: clamp(400px, 77vw, 750px);
 	height: 100%;
 	overflow: hidden;
 }
 
 .grow-text-cont {
-	width: 49.5%;
-	height: 31%;
+	width: 100%;
+	height: 100%;
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -223,10 +256,10 @@ nav a.active {
 }
 
 .grow-text {
-	font-size: 125px;
-	letter-spacing: 30px;
+	font-size: clamp(30px, 7.5vw, 120px);
+	letter-spacing: clamp(12px, 1.4vw, 30px);
 	font-weight: 999;
-	transform: scaleY(1.8);
+	transform: scaleY(1.7) scaleX(1.2);
 }
 
 .contact-mid-section {
@@ -239,7 +272,7 @@ nav a.active {
 
 .aside-contact-us-cont {
 	margin-left: 40px;
-	width: 360px;
+	width: clamp(240px, 24.5vw, 360px);
 	background-color: white;
 	border-radius: 32px;
 	display: flex;
@@ -251,13 +284,17 @@ nav a.active {
 
 @keyframes bounce {
 	70% {
-		margin-left: 48px;
+		margin-left: clamp(16px, 1.4vw, 48px);
 	}
 }
 
+.contact-us-text {
+	font-size: clamp(14px, 1.5vw, 20px);
+}
+
 .wave-animation {
-	width: 60px;
-	height: 60px;
+	width: clamp(40px, 3.5vw, 60px);
+	height: clamp(40px, 3.5vw, 60px);
 	transition:
 		transform 0.4s ease-out,
 		filter 0.27s linear;
@@ -276,19 +313,48 @@ nav a.active {
 }
 
 .latest-updates-cont {
-	width: 250px;
-	height: 270px;
-	border: 2px solid yellow;
+	width: clamp(200px, 15vw, 260px);
+	height: clamp(220px, 16vw, 280px);
 	border-radius: 25px;
 	display: flex;
 	flex-direction: column;
 	word-break: break-word;
 	padding: 15px;
+	border: 1px solid transparent;
+	backdrop-filter: blur(8px);
+	box-shadow:
+		inset 0 -5px 20px hsla(0, 0%, 0%, 0.4),
+		inset 0 5px 20px hsla(0, 0%, 100%, 0.4);
+	background: transparent;
+}
+
+.latest-updates-cont:before {
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 5px;
+	height: 30px;
+	border-radius: 35px;
+	background: linear-gradient(hsla(0, 0%, 100%, 0.6), hsla(0, 0%, 100%, 0));
+}
+
+.latest-updates-cont:after {
+	content: "";
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	top: 260px;
+	rotate: 180deg;
+	height: 30px;
+	border-radius: 35px;
+	background: linear-gradient(hsla(0, 0%, 100%, 0.4), hsla(0, 0%, 100%, 0));
 }
 
 .latest-updates-text {
 	text-align: center;
-	font-size: 14px;
+	font-size: clamp(12px, 1.1vw, 18px);
+	letter-spacing: 1px;
 }
 
 .update-text {
@@ -296,14 +362,31 @@ nav a.active {
 	font-size: 10px;
 }
 
+.contact-footer-main-cont {
+	flex-direction: column;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: auto;
+}
+
 .contact-footer {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
+	margin-top: auto;
 }
 
 .footer-text {
-	font-size: 10px;
+	font-size: clamp(7px, 0.65vw, 10px);
 	letter-spacing: 1px;
-	margin-left: 25px;
+	margin-left: 30px;
+}
+
+@media (max-width: 1020px) {
+	.navigation-bar {
+		background-color: red;
+		opacity: 50%;
+	}
 }
