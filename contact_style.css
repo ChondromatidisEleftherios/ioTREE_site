@@ -144,8 +144,8 @@ nav a.active {
 
 @media screen and (min-width: 1921px) {
 	#contact-main-cont {
-		max-width: 2700px; /* κρατάει το περιεχόμενο πιο "μαζεμένο" */
-		margin: 0 auto;
+		max-width: 2600px; /* κρατάει το περιεχόμενο πιο "μαζεμένο" */
+		margin: 0 auto !important;
 		gap: clamp(80px, 6vw, 160px) !important;
 	}
 
@@ -158,7 +158,7 @@ nav a.active {
 	}
 
 	.lets-together-text {
-		font-size: clamp(45px, 2.5vw, 69px) !important;
+		font-size: clamp(45px, 2.5vw, 64px) !important;
 	}
 
 	.grow-section {
@@ -203,7 +203,7 @@ nav a.active {
 	}
 
 	.contact-footer {
-		width: 100%;
+		width: 69% !important;
 		display: flex;
 		justify-content: flex-start;
 		margin-top: auto;
@@ -421,14 +421,14 @@ nav a.active {
 .contact-footer-main-cont {
 	flex-direction: column;
 	bottom: 0;
-	width: 100%;
+	width: 98%;
 	display: flex;
 	justify-content: flex-end;
 	margin-top: auto;
 }
 
 .contact-footer {
-	width: 100%;
+	width: 98%;
 	display: flex;
 	justify-content: flex-start;
 	margin-top: auto;
