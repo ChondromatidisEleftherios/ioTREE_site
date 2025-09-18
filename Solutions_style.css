@@ -1,0 +1,132 @@
+@font-face {
+	font-family: "monument";
+	src: url(MonumentExtended-Regular.otf);
+}
+
+@font-face {
+	font-family: "akzidenz-bold";
+	src: url(akzidenz.ttf);
+}
+
+@font-face {
+	font-family: "akzidenz";
+	src: url(akzidenz-normal.ttf);
+}
+/* Fullscreen background video */
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: clamp(800px, 20vw, 935px);
+    object-fit: cover;
+    z-index: -1; /* keeps video behind content */
+  }
+  
+  /* Content styling */
+  .content {
+    position: relative;
+    z-index: 1; /* keeps content above video */
+    color: white;
+    text-align: center;
+    top: 40%;
+    font-family: sans-serif;
+  }
+
+  .center-text {
+    text-align: center;
+    line-height: 1.1;
+  }
+  .center-text {
+    position: absolute;
+    top: clamp(100px, 25vh, 220px);   /* vertical placement */
+    left: clamp(40px, 10vw, 120px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;             /* spacing between SEED / TO / TREE */
+    font-family: "Monument", sans-serif;
+    font-stretch: 90%
+  }
+  
+  .seed {
+    font-size: 135px;
+    color: #f0f4f8; /* azure white */
+    font-weight: 300;
+    font-stretch: 90%;
+    font-family: "Monument";
+  }
+  
+  .to {
+    font-size: 135px;
+    color: black;
+    font-weight: 300;
+    font-stretch: 90%;
+    font-family: "Monument";
+
+  }
+  
+  .tree {
+    font-size: 135px;
+    color: #00da87; /* green */
+    font-weight: 400;
+    font-stretch: 90%;
+    font-family: "Monument";
+  }
+  
+  .solutions {
+    position: absolute;
+    left: 35%;                /* stick it to the far left */
+    top: 20%;               /* adjust vertical placement */
+    font-size: 90px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    color: black;
+    font-family: "Monument";
+    font-weight: 400;
+    font-stretch: 90%;
+  }
+  
+  .btn-container {
+    position: absolute;
+    top: clamp(790px, 10vw, 840px); /* move it up/down */
+    left: 53%;
+    transform: translateX(-50%);
+  }
+
+.glass-button {
+    padding: 1rem 3rem; /* px-12 py-4 */
+    background: rgba(255, 255, 255, 0.2); /* bg-white/20 */
+    backdrop-filter: blur(12px); /* backdrop-blur-md */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* border-white/30 */
+    border-radius: 9999px; /* rounded-full */
+    color: black; /* text-black */
+    font-family: "monument", sans-serif;
+    font-weight: bold;
+    font-size: 1.125rem; /* text-lg */
+    letter-spacing: 0.05em; /* tracking-wider */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* shadow-lg */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: clamp(2px, 16vw, 340px);
+  }
+  
+  /* Hover state */
+  .glass-button:hover {
+    background: rgba(255, 255, 255, 0.3); /* hover:bg-white/30 */
+    backdrop-filter: blur(16px); /* hover:backdrop-blur-lg */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); /* hover:shadow-xl */
+    transform: scale(1.05); /* hover:scale-105 */
+    border: 1px solid rgba(255, 255, 255, 0.4); /* hover:border-white/40 */
+  }
+  
+  /* Focus state */
+  .glass-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Active state */
+  .glass-button:active {
+    transform: scale(0.95); /* active:scale-95 */
+  }
